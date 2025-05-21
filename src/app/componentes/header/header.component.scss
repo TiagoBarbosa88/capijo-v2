@@ -36,6 +36,101 @@
       padding: 5px 0;
     }
   }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 80px; // Espaço entre o logo e o menu
+    margin-right: 40px; // Espaço entre o menu e os ícones
+  }
+
+  .nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 auto;
+    margin: 0 auto;
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 25px; // Espaço entre os itens do menu
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: auto; // Empurra os ícones para a direita
+
+    a {
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 16px;
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        &[aria-label="Facebook"] {
+          background-color: #3b5998;
+        }
+
+        &[aria-label="YouTube"] {
+          background-color: #ff0000;
+        }
+
+        &[aria-label="Instagram"] {
+          background-color: #e4405f;
+        }
+
+        &[aria-label="WhatsApp"] {
+          background-color: #25d366;
+        }
+
+        i {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  // Ajustes responsivos
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-center {
+      width: 100%;
+    }
+
+    .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    .social-icons {
+      margin: 15px 0;
+    }
+  }
 }
 
 .navbar-toggler {

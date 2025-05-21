@@ -1,33 +1,50 @@
- <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid d-flex justify-content-between">
-      <a class="navbar-brand" href="#">
-        <img src="assets/img/banner/logo4.png" alt="Nosso logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid d-flex justify-content-between">
+    <a class="navbar-brand" routerLink="/">
+      <img src="assets/img/banner/logo4.png" alt="Nosso logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+      <div class="nav-center">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" routerLink="/" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Artistas</a>
+            <a class="nav-link" routerLink="/artistas" routerLinkActive="active">Artistas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Estudio</a>
+            <a class="nav-link" routerLink="/estudio" routerLinkActive="active">Estudio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Serviços</a>
+            <a class="nav-link" routerLink="/servicos" routerLinkActive="active">Serviços</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Parceiros</a>
+            <a class="nav-link" routerLink="/parceiros" routerLinkActive="active">Parceiros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a>
+            <a class="nav-link" routerLink="/contato" routerLinkActive="active">Contato</a>
           </li>
         </ul>
       </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61564964385846" target="_blank" aria-label="Facebook">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/@CapijoProdu%C3%A7ao" target="_blank" aria-label="YouTube">
+          <i class="fa fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/capijoproducao" target="_blank" aria-label="Instagram">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/5511989883854" target="_blank" aria-label="WhatsApp">
+          <i class="fa fa-whatsapp"></i>
+        </a>
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>
