@@ -1,1 +1,84 @@
-<p>home works!</p>
+<!-- Main Content Begin -->
+<main class="main-content">
+  <!-- Hero Section -->
+  <section class="hero" role="banner" aria-label="Banner principal">
+    <div class="hero-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="hero__text reveal fade-bottom" role="heading" aria-level="1">
+              <span class="hero-subtitle" aria-label="Nome da empresa">Capijo</span>
+              <h1>Music Produções</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about spad">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="about__pic reveal fade-right">
+            <img src="/assets/img/estudio/10.jpg" alt="Estúdio Capijo Music" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about__text reveal fade-left">
+            <div class="section-title">
+              <h2>Quem somos ?</h2>
+            </div>
+            <p>Capijo Music Produções é uma produtora direcionada para a produção de conteúdo musical, desde o artista até a música final.
+              Fomentando a cultura musical em nosso meio social, nos bairros, nos municípios e nos estados,
+              trabalhamos sempre com a diversidade, abordando diversos estilos e tradições musicais nos
+              repertórios dos músicos: Sertanejo, MPB, Música Pop, Pop Rock, Rock Clássico, Hip Hop, entre outros.
+              Com um elenco diversificado de duplas sertanejas, cantores solo, bandas e DJs, nosso diferencial é
+              a introdução da tecnologia da informação no dia a dia do elenco e nas suas produções, com projetos
+              artísticos bem elaborados e um portfólio completo. Como complemento à arte musical, a tecnologia da
+              informação traz evolução e sustentabilidade, com o uso de equipamentos e softwares de ponta e
+              projetos dedicados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="event spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title reveal fade-bottom">
+            <h2>Shows</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="swiper-container event__slider reveal fade-bottom">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let event of events">
+              <div class="event__item">
+                <div class="event__item__pic" [style.background-image]="'url(' + event.image + ')'"
+                  [attr.aria-label]="'Imagem do evento ' + event.title">
+                  <div class="tag-date">
+                    <span>{{event.date}}</span>
+                  </div>
+                </div>
+                <div class="event__item__text">
+                  <h4>{{event.title}}</h4>
+                  <p><i class="fa fa-map-marker" aria-hidden="true"></i> <span>{{event.location}}</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- Main Content End -->

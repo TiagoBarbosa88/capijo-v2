@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './componentes/header/header.component';
 import { ArtistasComponent } from './pages/artistas/artistas.component';
-import { EstudioComponent } from './pages/estudio/estudio.component';
-import { ServicosComponent } from './pages/servicos/servicos.component';
-import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 import { ContatoComponent } from './pages/contato/contato.component';
+import { EstudioComponent } from './pages/estudio/estudio.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ParceirosComponent } from './pages/parceiros/parceiros.component';
+import { ServicosComponent } from './pages/servicos/servicos.component';
+import { ScrollRevealService } from './services/scroll-reveal.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,10 @@ import { ContatoComponent } from './pages/contato/contato.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ScrollRevealService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
