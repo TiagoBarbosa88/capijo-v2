@@ -1,10 +1,10 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Swiper } from 'swiper';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { ScrollRevealService } from '../../services/scroll-reveal.service';
-// Import Swiper core and required modules
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
 
 // Install Swiper modules
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 interface Event {
   image: string;
@@ -51,8 +51,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       location: 'São Paulo'
     }
   ];
-
-  private swiper?: SwiperCore;
+  private swiper?: Swiper;
 
   constructor(private scrollRevealService: ScrollRevealService) { }
 
@@ -74,15 +73,12 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private initSwiper(): void {
-    this.swiper = new SwiperCore('.event__slider', {
+    this.swiper = new Swiper('.event__slider', {
       slidesPerView: 3,
       spaceBetween: 30,
-      centeredSlides: true,
-      loop: true,
-      loopedSlides: 5, // Número de slides duplicados
+      centeredSlides: true, loop: true,
       speed: 800,
       slidesPerGroup: 1,
-      watchSlidesProgress: true,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
