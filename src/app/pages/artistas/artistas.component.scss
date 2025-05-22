@@ -1,0 +1,214 @@
+.artistas {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #003366;
+      position: relative;
+      margin-bottom: 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, #003366, #0066cc);
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100px;
+      }
+    }
+  }
+  .artist-card {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .artist-img {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .artist-text {
+      padding: 10px;
+      height: 400px;
+
+      h3 {
+        font-size: 2rem;
+        color: #003366;
+        margin-bottom: 15px;
+        margin-top: 0;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 25px;
+      }
+      .social-links {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 15px;
+        margin-top: 20px;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          font-size: 1.2rem;
+
+          &:nth-child(1) {
+            // Facebook
+            background: #3b5998;
+            color: white;
+          }
+
+          &:nth-child(2) {
+            // YouTube
+            background: #ff0000;
+            color: white;
+          }
+
+          &:nth-child(3) {
+            // Instagram
+            background: #e1306c;
+            color: white;
+          }
+
+          &:nth-child(4) {
+            // WhatsApp
+            background: #25d366;
+            color: white;
+          }
+
+          &:hover {
+            opacity: 0.8;
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Animações
+.reveal {
+  position: relative;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.fade-bottom {
+  transform: translateY(50px);
+}
+
+.fade-bottom.active {
+  transform: translateY(0);
+}
+
+.fade-left {
+  transform: translateX(-50px);
+}
+
+.fade-left.active {
+  transform: translateX(0);
+}
+
+.fade-right {
+  transform: translateX(50px);
+}
+
+.fade-right.active {
+  transform: translateX(0);
+}
+
+// Responsividade
+@media (max-width: 991.98px) {
+  .artistas {
+    .artist-card {
+      padding: 15px;
+
+      .artist-text {
+        padding: 20px;
+
+        h3 {
+          font-size: 1.8rem;
+        }
+      }
+
+      .artist-img img {
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .artistas {
+    .section-title h2 {
+      font-size: 2rem;
+    }
+
+    .artist-card {
+      margin-bottom: 30px;
+
+      .artist-text {
+        text-align: center;
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      .artist-img img {
+        height: 250px;
+      }
+    }
+  }
+}
