@@ -33,8 +33,9 @@
     animation: fadeInUp 1s ease forwards;
 
     .hero-subtitle {
-      font-family: "Roboto", sans-serif;
-      font-size: 4.5rem;
+      font-family: "Rockville Solid Regular";
+      text-transform: uppercase;
+      font-size: 2rem;
       font-weight: 700;
       margin-bottom: 1rem;
       display: block;
@@ -49,10 +50,11 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 4.5rem;
       font-weight: 300;
+      font-family: "Rockville Solid Regular", cursive;
       margin: 0;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       background: linear-gradient(to right, #003366, #fff);
       background-size: 200% auto;
       background-clip: text;
