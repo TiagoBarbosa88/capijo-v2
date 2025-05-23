@@ -1,1 +1,80 @@
-<p>parceiros works!</p>
+<section class="partners-section spad" aria-labelledby="parceiros-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title center-title">
+          <h2 id="parceiros-heading">Nossos Parceiros</h2>
+          <p>Conheça quem faz parte da nossa história</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Nelson - Acessórios e Luthieria -->
+      <div class="col-lg-6 col-md-6 mb-5">
+        <div class="partner-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/Parcerias/NELSON.jpg" class="card-img" alt="Nelson - Luthieria"
+              (click)="openImage('assets/img/Parcerias/NELSON.jpg')">
+          </div>
+          <div class="card-content">
+            <h3>Nelson - Acessórios e Luthieria</h3>
+            <p>Nelson / Rogério</p>
+            <div class="contact-info">
+              <i class="fab fa-whatsapp"></i>
+              <span>(11) 95078-7255</span>
+            </div>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Francisco Morato - SP</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gerenciamento Artístico -->
+      <div class="col-lg-6 col-md-6 mb-5">
+        <div class="partner-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/Parcerias/EVSSOM.jpg" class="card-img" alt="Gerenciamento Artístico"
+              (click)="openImage('assets/img/Parcerias/EVSSOM.jpg')">
+          </div>
+          <div class="card-content">
+            <h3>Gerenciamento Artístico</h3>
+            <p>Assessoria completa e acompanhamento personalizado, ajudando músicos a traçar os melhores passos
+              para o sucesso em sua carreira.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Relikias Lounge & Bar -->
+      <div class="col-lg-6 col-md-6 mb-5">
+        <div class="partner-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/Parcerias/Relikias Loung Bar.jpg" class="card-img" alt="Relikias Lounge & Bar"
+              (click)="openImage('assets/img/Parcerias/Relikias Loung Bar.jpg')">
+          </div>
+          <div class="card-content">
+            <h3>Relikias Lounge & Bar</h3>
+            <p>Bar e Casa de Shows</p>
+            <p>Ambiente agradável com música ao vivo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fotos e Filmagens -->
+      <div class="col-lg-6 col-md-6 mb-5">
+        <div class="partner-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/Parcerias/Flyer_BR[1].png" class="card-img" alt="Fotos e Filmagens"
+              (click)="openImage('assets/img/Parcerias/Flyer_BR[1].png')">
+          </div>
+          <div class="card-content">
+            <h3>Fotos e Filmagens</h3>
+            <p>Serviços profissionais de fotografia e filmagem para eventos e shows</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Viewer Component -->
+<app-image-viewer></app-image-viewer>

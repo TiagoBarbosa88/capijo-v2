@@ -1,0 +1,182 @@
+.partners-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 15px;
+      font-weight: 700;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, #003366, #0066cc);
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100px;
+      }
+    }
+
+    p {
+      color: #666;
+      font-size: 1.1rem;
+      margin-top: 20px;
+    }
+  }
+
+  .partner-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding-top: 75%; // 4:3 aspect ratio
+      max-height: 400px; // Maximum height for larger screens
+      background-color: #f8f9fa; // Light background for images with transparency
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: contain; // Changed to contain to show full image
+        transition: transform 0.5s ease;
+        cursor: pointer;
+        padding: 15px; // Add some padding around the image
+
+        &:hover {
+          transform: translate(-50%, -50%) scale(1.05);
+        }
+      }
+    }
+
+    .card-content {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+
+      h3 {
+        color: #003366;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.6;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #003366;
+
+        i {
+          font-size: 1.2rem;
+          margin-right: 10px;
+        }
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        color: #666;
+
+        i {
+          margin-right: 10px;
+          color: #003366;
+        }
+      }
+    }
+  }
+}
+
+// Responsividade
+@media (max-width: 991.98px) {
+  .partners-section {
+    padding: 60px 0;
+
+    .section-title h2 {
+      font-size: 2rem;
+    }
+
+    .partner-card {
+      .card-img-wrapper {
+        padding-top: 100%; // Square aspect ratio on smaller screens
+        max-height: 300px;
+      }
+
+      .card-content {
+        padding: 20px;
+
+        h3 {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .partners-section {
+    .section-title {
+      margin-bottom: 30px;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .partner-card {
+      margin-bottom: 30px;
+
+      .card-img-wrapper {
+        max-height: 250px;
+      }
+
+      .card-content {
+        padding: 15px;
+      }
+    }
+  }
+}
