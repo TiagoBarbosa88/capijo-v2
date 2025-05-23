@@ -115,10 +115,23 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
+      transition: all 0.3s ease;
+
+      &:not(.show) {
+        display: none;
+      }
+
+      &.show {
+        display: flex; // Changed from block to flex
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     .nav-center {
       width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     .navbar-nav {
@@ -129,6 +142,10 @@
 
     .social-icons {
       margin: 15px 0;
+      display: flex;
+      justify-content: center; // Center the social icons
+      width: 100%; // Make it full width to ensure proper centering
+      gap: 15px; // Maintain consistent gap
     }
   }
 }

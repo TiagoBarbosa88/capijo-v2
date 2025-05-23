@@ -3,31 +3,30 @@
     <a class="navbar-brand" routerLink="/">
       <img src="assets/img/banner/logo4.png" alt="Nosso logo">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse justify-content-between" [class.show]="isMenuOpen" id="navbarSupportedContent">
       <div class="nav-center">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" routerLink="/" routerLinkActive="active"
-              [routerLinkActiveOptions]="{exact: true}">Home</a>
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+              (click)="closeMenu()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/artistas" routerLinkActive="active">Artistas</a>
+            <a class="nav-link" routerLink="/artistas" routerLinkActive="active" (click)="closeMenu()">Artistas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/estudio" routerLinkActive="active">Estudio</a>
+            <a class="nav-link" routerLink="/estudio" routerLinkActive="active" (click)="closeMenu()">Estudio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/servicos" routerLinkActive="active">Serviços</a>
+            <a class="nav-link" routerLink="/servicos" routerLinkActive="active" (click)="closeMenu()">Eventos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/parceiros" routerLinkActive="active">Parceiros</a>
+            <a class="nav-link" routerLink="/parceiros" routerLinkActive="active" (click)="closeMenu()">Parceiros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/contato" routerLinkActive="active">Contato</a>
+            <a class="nav-link" routerLink="/contato" routerLinkActive="active" (click)="closeMenu()">Contato</a>
           </li>
         </ul>
       </div>
