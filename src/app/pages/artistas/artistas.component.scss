@@ -54,6 +54,7 @@
         object-fit: cover;
         border-radius: 10px;
         transition: transform 0.5s ease;
+        cursor: pointer;
 
         &:hover {
           transform: scale(1.05);
@@ -163,6 +164,8 @@
 .fade-right.active {
   transform: translateX(0);
 }
+
+// Modal de Imagem
 
 // Responsividade
 @media (max-width: 991.98px) {

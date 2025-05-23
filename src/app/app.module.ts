@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HeaderComponent } from './componentes/header/header.component';
+import { ImageViewerComponent } from './componentes/shared/image-viewer/image-viewer.component';
 import { ArtistasComponent } from './pages/artistas/artistas.component';
 import { ContatoComponent } from './pages/contato/contato.component';
 import { EstudioComponent } from './pages/estudio/estudio.component';
@@ -24,7 +25,8 @@ import { ScrollRevealService } from './services/scroll-reveal.service';
     EstudioComponent,
     ServicosComponent,
     ParceirosComponent,
-    ContatoComponent
+    ContatoComponent,
+    ImageViewerComponent
   ],
   imports: [
     BrowserModule,

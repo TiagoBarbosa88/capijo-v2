@@ -32,7 +32,8 @@
         </div>
         <div class="col-lg-6 order-1 order-lg-2">
           <div class="artist-img">
-            <img src="/assets/img/Artistas/Alex_Lacerda.jpg" alt="Alex Lacerda" class="img-fluid">
+            <img src="/assets/img/Artistas/Alex_Lacerda.jpg" alt="Alex Lacerda" class="img-fluid"
+              (click)="openImage('/assets/img/Artistas/Alex_Lacerda.jpg')">
           </div>
         </div>
       </div>
@@ -43,7 +44,8 @@
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="artist-img">
-            <img src="/assets/img/Artistas/CRONOLOGIA.jpg" alt="Banda Cronologia" class="img-fluid">
+            <img src="/assets/img/Artistas/CRONOLOGIA.jpg" alt="Banda Cronologia" class="img-fluid"
+              (click)="openImage('/assets/img/Artistas/CRONOLOGIA.jpg')">
           </div>
         </div>
         <div class="col-lg-6">
@@ -90,7 +92,8 @@
         </div>
         <div class="col-lg-6 order-1 order-lg-2">
           <div class="artist-img">
-            <img src="/assets/img/Artistas/GARAGEM120.jpg" alt="Garagem 120" class="img-fluid">
+            <img src="/assets/img/Artistas/GARAGEM120.jpg" alt="Garagem 120" class="img-fluid"
+              (click)="openImage('/assets/img/Artistas/GARAGEM120.jpg')">
           </div>
         </div>
       </div>
@@ -101,7 +104,8 @@
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="artist-img">
-            <img src="/assets/img/Artistas/FRAYZER.jpg" alt="FRAYZER" class="img-fluid">
+            <img src="/assets/img/Artistas/FRAYZER.jpg" alt="FRAYZER" class="img-fluid"
+              (click)="openImage('/assets/img/Artistas/FRAYZER.jpg')">
           </div>
         </div>
         <div class="col-lg-6">
@@ -124,5 +128,9 @@
         </div>
       </div>
     </div>
+
   </div>
 </section>
+
+<!-- Image Viewer Component -->
+<app-image-viewer></app-image-viewer>
