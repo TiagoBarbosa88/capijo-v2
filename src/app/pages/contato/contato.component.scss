@@ -1,0 +1,229 @@
+// Map Section
+.map-section {
+  .map-container {
+    width: 100%;
+    height: 450px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Contact Section
+.contact-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+
+  .contact-info {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+
+    h2 {
+      color: #003366;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+
+      i {
+        font-size: 1.5rem;
+        color: #003366;
+        margin-right: 15px;
+        margin-top: 5px;
+      }
+
+      .info-content {
+        h3 {
+          color: #003366;
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+          font-weight: 600;
+        }
+
+        p {
+          color: #666;
+          margin: 0;
+
+          a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #003366;
+            }
+          }
+        }
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+
+      a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #003366;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+          background: #0066cc;
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+
+    h2 {
+      color: #003366;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+
+      .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        padding: 12px 15px;
+        height: auto;
+        transition: all 0.3s ease;
+
+        &:focus {
+          border-color: #003366;
+          box-shadow: none;
+        }
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      textarea.form-control {
+        resize: none;
+      }
+    }
+
+    .submit-btn {
+      background: linear-gradient(90deg, #003366, #0066cc);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      width: 100%;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      &:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+// Copyable Text Styles
+.copyable {
+  cursor: pointer;
+  user-select: all;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(0, 51, 102, 0.1);
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+}
+
+.copy-indicator {
+  font-size: 12px;
+  color: #666;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: 5px;
+
+  .copyable:hover + & {
+    opacity: 1;
+  }
+}
+
+.copied {
+  animation: copy-feedback 1s ease;
+}
+
+@keyframes copy-feedback {
+  0% {
+    background-color: rgba(0, 51, 102, 0.1);
+  }
+  50% {
+    background-color: rgba(0, 51, 102, 0.2);
+  }
+  100% {
+    background-color: rgba(0, 51, 102, 0.1);
+  }
+}
+
+// Responsive Styles
+@media (max-width: 991.98px) {
+  .contact-section {
+    padding: 60px 0;
+
+    .contact-info,
+    .contact-form {
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-section {
+    .contact-info {
+      margin-bottom: 30px;
+
+      h2,
+      .contact-form h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+  }
+}

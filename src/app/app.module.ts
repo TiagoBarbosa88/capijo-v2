@@ -14,6 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { ScrollRevealService } from './services/scroll-reveal.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ScrollRevealService } from './services/scroll-reveal.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ScrollRevealService],
   bootstrap: [AppComponent]
