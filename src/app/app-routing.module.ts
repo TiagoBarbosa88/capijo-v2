@@ -8,13 +8,36 @@ import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'artistas', component: ArtistasComponent },
-  { path: 'estudio', component: EstudioComponent },
-  { path: 'servicos', component: ServicosComponent },
-  { path: 'parceiros', component: ParceirosComponent },
-  { path: 'contato', component: ContatoComponent }
+  {
+    path: '',
+    component: HomeComponent,
+    data: { title: 'Home' }
+  },
+  {
+    path: 'artistas',
+    component: ArtistasComponent,
+    data: { title: 'Artistas' }
+  },
+  {
+    path: 'estudio',
+    component: EstudioComponent,
+    data: { title: 'Estúdio' }
+  },
+  {
+    path: 'servicos',
+    component: ServicosComponent,
+    data: { title: 'Serviços' }
+  },
+  {
+    path: 'parceiros',
+    component: ParceirosComponent,
+    data: { title: 'Parceiros' }
+  },
+  {
+    path: 'contato',
+    component: ContatoComponent,
+    data: { title: 'Contato' }
+  }
 ];
 
 @NgModule({
