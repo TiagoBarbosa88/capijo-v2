@@ -1,1 +1,128 @@
-<p>servicos works!</p>
+<!-- Seção de Eventos -->
+<section class="services-section spad" aria-labelledby="eventos-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title center-title">
+          <h2 id="eventos-heading">Nossos eventos</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Patrulha do Vinil -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="event-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/eventos/Patrulha-Do-Vinil.jpg" class="card-img-top" alt="Patrulha do Vinil"
+              (click)="openImage('assets/img/eventos/Patrulha-Do-Vinil.jpg')">
+          </div>
+        </div>
+      </div>
+
+      <!-- Juscelio -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="event-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/eventos/Jucelio.jpg" class="card-img-top" alt="Juscelio em Performance"
+              (click)="openImage('assets/img/eventos/Jucelio.jpg')">
+          </div>
+        </div>
+      </div>
+
+      <!-- Cronologia -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="event-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/eventos/Cronologia.jpg" class="card-img-top" alt="Banda Cronologia"
+              (click)="openImage('assets/img/eventos/Cronologia.jpg')">
+          </div>
+        </div>
+      </div>
+
+      <!-- Garagem 120 -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="event-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/eventos/Garagem120.jpg" class="card-img-top" alt="Garagem 120"
+              (click)="openImage('assets/img/eventos/Garagem120.jpg')">
+          </div>
+        </div>
+      </div>
+
+      <!-- FRAYZER -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="event-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/eventos/FRAYZER.jpg" class="card-img-top" alt="FRAYZER"
+              (click)="openImage('assets/img/eventos/FRAYZER.jpg')">
+          </div>
+        </div>
+      </div>
+
+      <!-- DJ VANDOSSOM -->
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="event-card">
+          <div class="card-img-wrapper">
+            <img src="assets/img/eventos/DJ. VANDOSSOM.jpg" class="card-img-top" alt="DJ VANDOSSOM"
+              (click)="openImage('assets/img/eventos/DJ. VANDOSSOM.jpg')">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção Onde Atendemos -->
+<section class="locations-section spad" aria-labelledby="locais-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title center-title">
+          <h2 id="locais-heading">Onde atendemos</h2>
+          <p>Levamos música e entretenimento onde você precisar</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Clubes e Bares -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="location-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-glass-martini-alt"></i>
+          </div>
+          <h3>Clubes e Bares</h3>
+          <p>Som e iluminação profissional para estabelecimentos noturnos, garantindo a melhor experiência para seu
+            público.</p>
+        </div>
+      </div>
+
+      <!-- Eventos Corporativos -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="location-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3>Eventos Corporativos</h3>
+          <p>Estrutura completa para conferências, convenções e eventos empresariais, com equipamentos de última
+            geração.</p>
+        </div>
+      </div>
+
+      <!-- Festas e Eventos -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="location-card">
+          <div class="icon-wrapper">
+            <i class="fas fa-birthday-cake"></i>
+          </div>
+          <h3>Festas e Eventos</h3>
+          <p>Sonorização para festas particulares, casamentos, aniversários e eventos especiais.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Viewer Component -->
+<app-image-viewer></app-image-viewer>
