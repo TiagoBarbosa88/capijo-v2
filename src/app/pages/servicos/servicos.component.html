@@ -5,67 +5,77 @@
       <div class="col-lg-12">
         <div class="section-title center-title">
           <h2 id="eventos-heading">Nossos eventos</h2>
+          <p id="eventos-description">Confira alguns dos eventos e shows que realizamos</p>
         </div>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" role="list" aria-labelledby="eventos-heading" aria-describedby="eventos-description">
       <!-- Patrulha do Vinil -->
-      <div class="col-lg-4 col-md-6 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5" role="listitem">
         <div class="event-card">
           <div class="card-img-wrapper">
-            <img src="assets/img/eventos/Patrulha-Do-Vinil.jpg" class="card-img-top" alt="Patrulha do Vinil"
-              (click)="openImage('assets/img/eventos/Patrulha-Do-Vinil.jpg')">
+            <img src="assets/img/eventos/Patrulha-Do-Vinil.jpg" class="card-img-top"
+              alt="Show da banda Patrulha do Vinil com público animado"
+              (click)="openImage('assets/img/eventos/Patrulha-Do-Vinil.jpg')" role="button" tabindex="0"
+              aria-label="Clique para ampliar a foto do show da Patrulha do Vinil">
           </div>
         </div>
       </div>
 
       <!-- Juscelio -->
-      <div class="col-lg-4 col-md-6 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5" role="listitem">
         <div class="event-card">
           <div class="card-img-wrapper">
-            <img src="assets/img/eventos/Jucelio.jpg" class="card-img-top" alt="Juscelio em Performance"
-              (click)="openImage('assets/img/eventos/Jucelio.jpg')">
+            <img src="assets/img/eventos/Jucelio.jpg" class="card-img-top"
+              alt="Juscelio em performance ao vivo no palco" (click)="openImage('assets/img/eventos/Jucelio.jpg')"
+              role="button" tabindex="0" aria-label="Clique para ampliar a foto do show do Juscelio">
           </div>
         </div>
       </div>
 
       <!-- Cronologia -->
-      <div class="col-lg-4 col-md-6 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5" role="listitem">
         <div class="event-card">
           <div class="card-img-wrapper">
-            <img src="assets/img/eventos/Cronologia.jpg" class="card-img-top" alt="Banda Cronologia"
-              (click)="openImage('assets/img/eventos/Cronologia.jpg')">
+            <img src="assets/img/eventos/Cronologia.jpg" class="card-img-top"
+              alt="Show da Banda Cronologia com efeitos de iluminação"
+              (click)="openImage('assets/img/eventos/Cronologia.jpg')" role="button" tabindex="0"
+              aria-label="Clique para ampliar a foto do show da Banda Cronologia">
           </div>
         </div>
       </div>
 
       <!-- Garagem 120 -->
-      <div class="col-lg-4 col-md-6 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5" role="listitem">
         <div class="event-card">
           <div class="card-img-wrapper">
-            <img src="assets/img/eventos/Garagem120.jpg" class="card-img-top" alt="Garagem 120"
-              (click)="openImage('assets/img/eventos/Garagem120.jpg')">
+            <img src="assets/img/eventos/Garagem120.jpg" class="card-img-top"
+              alt="Banda Garagem 120 em apresentação ao vivo" (click)="openImage('assets/img/eventos/Garagem120.jpg')"
+              role="button" tabindex="0" aria-label="Clique para ampliar a foto do show da Garagem 120">
           </div>
         </div>
       </div>
 
       <!-- FRAYZER -->
-      <div class="col-lg-4 col-md-6 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5" role="listitem">
         <div class="event-card">
           <div class="card-img-wrapper">
-            <img src="assets/img/eventos/FRAYZER.jpg" class="card-img-top" alt="FRAYZER"
-              (click)="openImage('assets/img/eventos/FRAYZER.jpg')">
+            <img src="assets/img/eventos/FRAYZER.jpg" class="card-img-top" alt="FRAYZER em performance no palco"
+              (click)="openImage('assets/img/eventos/FRAYZER.jpg')" role="button" tabindex="0"
+              aria-label="Clique para ampliar a foto do show do FRAYZER">
           </div>
         </div>
       </div>
 
       <!-- DJ VANDOSSOM -->
-      <div class="col-lg-4 col-md-6 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5" role="listitem">
         <div class="event-card">
           <div class="card-img-wrapper">
-            <img src="assets/img/eventos/DJ. VANDOSSOM.jpg" class="card-img-top" alt="DJ VANDOSSOM"
-              (click)="openImage('assets/img/eventos/DJ. VANDOSSOM.jpg')">
+            <img src="assets/img/eventos/DJ. VANDOSSOM.jpg" class="card-img-top"
+              alt="DJ VANDOSSOM em performance com equipamentos de DJ"
+              (click)="openImage('assets/img/eventos/DJ. VANDOSSOM.jpg')" role="button" tabindex="0"
+              aria-label="Clique para ampliar a foto do DJ VANDOSSOM">
           </div>
         </div>
       </div>
@@ -80,19 +90,20 @@
       <div class="col-lg-12">
         <div class="section-title center-title">
           <h2 id="locais-heading">Onde atendemos</h2>
-          <p>Levamos música e entretenimento onde você precisar</p>
+          <p id="locations-description">Levamos música e entretenimento de qualidade para diversos tipos de eventos e
+            locais</p>
         </div>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" role="list" aria-labelledby="locais-heading" aria-describedby="locations-description">
       <!-- Clubes e Bares -->
-      <div class="col-lg-4 col-md-6 mb-4">
+      <div class="col-lg-4 col-md-6 mb-4" role="listitem">
         <div class="location-card">
-          <div class="icon-wrapper">
+          <div class="icon-wrapper" aria-hidden="true">
             <i class="fas fa-glass-martini-alt"></i>
           </div>
-          <h3>Clubes e Bares</h3>
+          <h3 id="clubes-heading">Clubes e Bares</h3>
           <p>Som e iluminação profissional para estabelecimentos noturnos, garantindo a melhor experiência para seu
             público.</p>
         </div>

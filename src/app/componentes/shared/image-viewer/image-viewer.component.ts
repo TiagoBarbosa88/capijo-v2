@@ -1,12 +1,30 @@
+import { AsyncPipe, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ImageViewerService } from '../../../services/utils/image-viewer.service';
 
 @Component({
   selector: 'app-image-viewer',
+  standalone: true,
+  imports: [AsyncPipe, NgIf],
   template: `
-    <div class="image-modal" [class.active]="selectedImage$ | async" (click)="closeImage()">
-      <span class="close-button" (click)="closeImage()">&times;</span>
-      <img [src]="selectedImage$ | async" *ngIf="selectedImage$ | async" alt="Imagem em tela cheia" class="modal-image">
+    <div class="image-modal" 
+         [class.active]="selectedImage$ | async" 
+         (click)="closeImage()"
+         role="dialog"
+         aria-modal="true"
+         [attr.aria-label]="'Visualizador de imagem' + ((selectedImage$ | async) ? ' aberto' : '')"
+         tabindex="-1">
+      <span class="close-button" 
+            (click)="closeImage()"
+            role="button"
+            tabindex="0"
+            aria-label="Fechar visualizador de imagem"
+            (keydown.enter)="closeImage()">&times;</span>
+      <img [src]="selectedImage$ | async" 
+           *ngIf="selectedImage$ | async" 
+           [alt]="'Visualização ampliada da imagem ' + (selectedImage$ | async)" 
+           class="modal-image"
+           (click)="$event.stopPropagation()">
     </div>
   `,
   styles: [`

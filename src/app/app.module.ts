@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './componentes/footer/footer.component';
@@ -14,7 +15,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { ScrollRevealService } from './services/scroll-reveal.service';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,14 +26,14 @@ import { FormsModule } from '@angular/forms';
     EstudioComponent,
     ServicosComponent,
     ParceirosComponent,
-    ContatoComponent,
-    ImageViewerComponent
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ImageViewerComponent
   ],
   providers: [ScrollRevealService],
   bootstrap: [AppComponent]

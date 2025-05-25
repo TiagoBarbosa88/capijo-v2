@@ -63,4 +63,13 @@ export class ContatoComponent implements OnInit {
       message: ''
     };
   }
+
+  async copyText(text: string): Promise<void> {
+    try {
+      await navigator.clipboard.writeText(text);
+      // You could add a toast or notification here to show success
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  }
 }
