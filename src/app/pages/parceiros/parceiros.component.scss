@@ -1,10 +1,11 @@
-.partners-section {
-  padding: 80px 0;
+.partners-section,
+.supporters-section {
+  padding: 60px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 
   .section-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
     h2 {
       font-size: 2.5rem;
@@ -36,10 +37,12 @@
       margin-top: 20px;
     }
   }
+}
 
+.partners-section {
   .partner-card {
     background: white;
-    border-radius: 15px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -48,16 +51,16 @@
     flex-direction: column;
 
     &:hover {
-      transform: translateY(-10px);
+      transform: translateY(-5px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
 
     .card-img-wrapper {
       position: relative;
       overflow: hidden;
-      padding-top: 75%; // 4:3 aspect ratio
-      max-height: 400px; // Maximum height for larger screens
-      background-color: #f8f9fa; // Light background for images with transparency
+      padding-top: 60%; // Reduced height
+      max-height: 300px; // Reduced maximum height
+      background-color: #f8f9fa;
 
       img {
         position: absolute;
@@ -66,10 +69,10 @@
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        object-fit: contain; // Changed to contain to show full image
+        object-fit: contain;
         transition: transform 0.5s ease;
         cursor: pointer;
-        padding: 15px; // Add some padding around the image
+        padding: 15px;
 
         &:hover {
           transform: translate(-50%, -50%) scale(1.05);
@@ -78,7 +81,7 @@
     }
 
     .card-content {
-      padding: 25px;
+      padding: 20px;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -86,46 +89,81 @@
 
       h3 {
         color: #003366;
-        font-size: 1.5rem;
-        margin-bottom: 15px;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
         font-weight: 600;
       }
 
       p {
         color: #666;
-        margin-bottom: 15px;
-        line-height: 1.6;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        font-size: 0.95rem;
 
         &:last-child {
           margin-bottom: 0;
         }
       }
 
-      .contact-info {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        color: #003366;
-
-        i {
-          font-size: 1.2rem;
-          margin-right: 10px;
-        }
-
-        span {
-          font-weight: 500;
-        }
-      }
-
+      .contact-info,
       .location {
-        display: flex;
-        align-items: center;
+        font-size: 0.9rem;
         color: #666;
+        margin-bottom: 5px;
 
         i {
-          margin-right: 10px;
+          margin-right: 8px;
           color: #003366;
         }
+      }
+    }
+  }
+}
+
+.supporters-section {
+  background: #ffffff;
+  border-top: 1px solid #eee;
+
+  .supporter-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding-top: 75%;
+      background-color: #f8f9fa;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 15px;
+      }
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+      background-color: white;
+
+      h3 {
+        color: #003366;
+        font-size: 1.1rem;
+        margin: 0;
+        font-weight: 600;
       }
     }
   }

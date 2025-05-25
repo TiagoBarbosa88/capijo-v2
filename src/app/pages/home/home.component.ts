@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       location: 'Turne em Paraty, São Paulo'
     },
     {
-      image: '/assets/img/Artistas/CRONOLOGIA.jpg',
+      image: '/assets/img/Artistas/Cronologia2.jpg',
       date: '24 de Maio - 2025',
       title: 'Banda Cronologia',
       location: 'Relikias Lounge & Bar - Perus'
