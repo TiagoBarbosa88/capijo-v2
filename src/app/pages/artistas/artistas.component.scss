@@ -174,7 +174,9 @@
       padding: 15px;
 
       .artist-text {
-        padding: 20px;
+        padding: 0 auto;        
+        height: 280px;
+        margin-bottom: 10px;
 
         h3 {
           font-size: 1.8rem;
@@ -184,6 +186,8 @@
       .artist-img img {
         height: 300px;
       }
+
+      
     }
   }
 }

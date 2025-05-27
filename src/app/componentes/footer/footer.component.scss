@@ -10,6 +10,17 @@
 
   &__address {
     padding-top: 20px; // Adicionando padding no topo do endereço
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      text-align: left;
+
+      ul {
+        width: fit-content;
+      }
+    }
+
     ul {
       list-style: none;
       padding: 0;
@@ -213,7 +224,15 @@
 // Responsividade
 @media (max-width: 991.98px) {
   .footer {
+    text-align: center;
     padding: 60px 0 30px;
+    background-color: #05111d;
+
+    .footer__address {
+      text-align: center;
+      margin-left: 10px auto;
+      border: 1px red solid;
+    }
 
     &__social {
       margin: 40px 0;

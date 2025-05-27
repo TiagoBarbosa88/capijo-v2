@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    data: { title: 'Home' }
+    data: { title: 'Produtora Músical' }
   },
   {
     path: 'artistas',
@@ -24,9 +24,9 @@ const routes: Routes = [
     data: { title: 'Estúdio' }
   },
   {
-    path: 'servicos',
+    path: 'eventos',
     component: ServicosComponent,
-    data: { title: 'Serviços' }
+    data: { title: 'Eventos' }
   },
   {
     path: 'parceiros',
