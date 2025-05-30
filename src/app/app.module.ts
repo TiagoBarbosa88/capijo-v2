@@ -15,6 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
 import { ScrollRevealService } from './services/scroll-reveal.service';
+import { EquipeComponent } from './pages/equipe/equipe.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ScrollRevealService } from './services/scroll-reveal.service';
     EstudioComponent,
     ServicosComponent,
     ParceirosComponent,
-    ContatoComponent
+    ContatoComponent,
+    EquipeComponent
   ],
   imports: [
     BrowserModule,
