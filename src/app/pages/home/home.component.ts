@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { Swiper } from 'swiper';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper';
 import { ScrollRevealService } from '../../services/scroll-reveal.service';
 
 // Install Swiper modules
