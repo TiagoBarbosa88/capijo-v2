@@ -22,32 +22,44 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   events: Event[] = [
     {
       image: '/assets/img/Artistas/Alex_Lacerda.jpg',
-      date: 'A Partir de janeiro - 2025',
+      date: 'Data a confirmar',
       title: 'Alex Lacerda',
-      location: 'Turne em Paraty, São Paulo'
+      location: 'São Paulo'
     },
     {
       image: '/assets/img/Artistas/Cronologia2.jpg',
-      date: '24 de Maio - 2025',
-      title: 'Banda Cronologia',
-      location: 'Relikias Lounge & Bar - Perus'
+      date: '11 de Outubro - 2026',
+      title: 'Praça Inacia Dias',
+      location: 'Em frente a estação CPTM Perus-SP'
     },
     {
       image: '/assets/img/Artistas/GARAGEM120.jpg',
-      date: '25 de Maio - 2025',
+      date: 'Data a confirmar',
       title: 'GARAGEM 120',
-      location: 'Relikias Lounge & Bar - Perus'
+      location: 'São Paulo'
     },
     {
       image: '/assets/img/Artistas/Jucelio.jpg',
-      date: '31 de Maio - 2025',
+      date: 'Data a confirmar',
       title: 'Jucelio',
       location: 'São Paulo'
     },
     {
       image: '/assets/img/eventos/Patrulha-Do-Vinil.jpg',
-      date: '07 de Junho - 2025',
+      date: 'Data a confirmar',
       title: 'Patrulha do Vinil',
+      location: 'São Paulo'
+    },
+    {
+      image: '/assets/img/eventos/Senhor-Florista.png',
+      date: 'Data a confirmar',
+      title: 'Senhor Florista',
+      location: 'São Paulo'
+    },
+    {
+      image: '/assets/img/eventos/Willian-Rodrigues.png',
+      date: 'Data a confirmar',
+      title: 'Willian Rodrigues',
       location: 'São Paulo'
     }
   ];

@@ -108,6 +108,12 @@
     }
   }
 
+  &--tall {
+    .about__pic {
+      height: 620px;
+    }
+  }
+
   &__text {
     padding: 30px;
     opacity: 0;

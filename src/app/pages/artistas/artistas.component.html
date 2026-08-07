@@ -9,151 +9,56 @@
       </div>
     </div>
 
-    <!-- Card 1 - Alex Lacerda -->
-    <article class="artist-card reveal fade-right" role="article" aria-labelledby="alex-heading">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-2 order-lg-1">
-          <div class="artist-text">
-            <h3 id="alex-heading">Alex Lacerda</h3>
-            <p>Músico talentoso com uma voz marcante, Alex Lacerda traz em suas interpretações toda a emoção do
-              sertanejo. Seu mais recente sucesso "Acorda amor" já conquistou milhares de fãs.</p>
-            <nav class="social-links" aria-label="Redes sociais do Alex Lacerda">
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
-                aria-label="Siga Alex Lacerda no Facebook (abre em nova janela)">
-                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.youtube.com/watch?v=ioUyGpEHMZI" target="_blank" rel="noopener noreferrer"
-                aria-label="Assista Alex Lacerda no YouTube (abre em nova janela)">
-                <i class="fab fa-youtube" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.instagram.com/alexlacerdaoficial/" target="_blank" rel="noopener noreferrer"
-                aria-label="Siga Alex Lacerda no Instagram (abre em nova janela)">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-              </a>
-            </nav>
+    <div style="display:none">{{ debugRender('template renderizando') }}</div>
+    <ng-container *ngFor="let artist of artists; let i = index">
+      <article
+        class="artist-card reveal"
+        [class.fade-right]="i % 2 === 0"
+        [class.fade-left]="i % 2 !== 0"
+        role="article"
+        [attr.aria-labelledby]="artist.id + '-heading'">
+        <div class="row align-items-center">
+          <div class="col-lg-6" [class.order-2]="i % 2 === 0" [class.order-lg-1]="i % 2 === 0" [class.order-1]="i % 2 !== 0" [class.order-lg-2]="i % 2 !== 0">
+            <div class="artist-text">
+              <h3 [id]="artist.id + '-heading'">{{ artist.name }}</h3>
+              <p>{{ artist.description }}</p>
+              <nav class="social-links" [attr.aria-label]="'Redes sociais de ' + artist.name">
+                <ng-container *ngIf="artist.social.facebook">
+                  <a [href]="artist.social.facebook" target="_blank" rel="noopener noreferrer"
+                    [attr.aria-label]="'Siga ' + artist.name + ' no Facebook (abre em nova janela)'">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                  </a>
+                </ng-container>
+                <ng-container *ngIf="artist.social.youtube">
+                  <a [href]="artist.social.youtube" target="_blank" rel="noopener noreferrer"
+                    [attr.aria-label]="'Assista ' + artist.name + ' no YouTube (abre em nova janela)'">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                  </a>
+                </ng-container>
+                <ng-container *ngIf="artist.social.instagram">
+                  <a [href]="artist.social.instagram" target="_blank" rel="noopener noreferrer"
+                    [attr.aria-label]="'Siga ' + artist.name + ' no Instagram (abre em nova janela)'">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </ng-container>
+              </nav>
+            </div>
+          </div>
+          <div class="col-lg-6" [class.order-1]="i % 2 === 0" [class.order-lg-2]="i % 2 === 0" [class.order-2]="i % 2 !== 0" [class.order-lg-1]="i % 2 !== 0">
+            <div class="artist-img">
+              <img [src]="artist.image"
+                [alt]="artist.imageAlt"
+                class="img-fluid"
+                (click)="openImage(artist.image)"
+                (keydown.enter)="openImage(artist.image)"
+                role="button"
+                tabindex="0"
+                [attr.aria-label]="'Clique ou pressione Enter para ampliar a imagem de ' + artist.name">
+            </div>
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2">
-          <div class="artist-img">
-            <img src="/assets/img/Artistas/Alex_Lacerda.jpg"
-              alt="Alex Lacerda em performance no palco usando camisa branca e chapéu" class="img-fluid"
-              (click)="openImage('/assets/img/Artistas/Alex_Lacerda.jpg')"
-              (keydown.enter)="openImage('/assets/img/Artistas/Alex_Lacerda.jpg')" role="button" tabindex="0"
-              aria-label="Clique ou pressione Enter para ampliar a imagem de Alex Lacerda">
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Card 2 - Banda Cronologia -->
-    <article class="artist-card reveal fade-left" role="article" aria-labelledby="cronologia-heading">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="artist-img">
-            <img src="/assets/img/Artistas/Cronologia2.jpg"
-              alt="Banda Cronologia em apresentação ao vivo com seus integrantes tocando instrumentos" class="img-fluid"
-              (click)="openImage('/assets/img/Artistas/CRONOLOGIA.jpg')"
-              (keydown.enter)="openImage('/assets/img/Artistas/CRONOLOGIA.jpg')" role="button" tabindex="0"
-              aria-label="Clique ou pressione Enter para ampliar a imagem da Banda Cronologia">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="artist-text">
-            <h3 id="cronologia-heading">Banda Cronologia</h3>
-            <p>A Banda Cronologia traz um repertório diversificado, mesclando clássicos do rock com hits contemporâneos.
-              Suas apresentações são marcadas pela energia contagiante e alta qualidade musical.</p>
-            <nav class="social-links" aria-label="Redes sociais da Banda Cronologia">
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
-                aria-label="Siga a Banda Cronologia no Facebook (abre em nova janela)">
-                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.youtube.com/@capijoproducao" target="_blank" rel="noopener noreferrer"
-                aria-label="Assista a Banda Cronologia no YouTube (abre em nova janela)">
-                <i class="fab fa-youtube" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                aria-label="Siga a Banda Cronologia no Instagram (abre em nova janela)">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-              </a>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Card 3 - Garagem 120 -->
-    <article class="artist-card reveal fade-right" role="article" aria-labelledby="garagem120-heading">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-2 order-lg-1">
-          <div class="artist-text">
-            <h3 id="garagem120-heading">Garagem 120</h3>
-            <p>Com um som autêntico e letras marcantes, a Garagem 120 vem conquistando seu espaço na cena musical.
-              "Selva de Pedra" é apenas uma amostra do talento desta banda única.</p>
-            <nav class="social-links" aria-label="Redes sociais da Garagem 120">
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
-                aria-label="Siga a Garagem 120 no Facebook (abre em nova janela)">
-                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.youtube.com/watch?v=Nxg9LqxajdU" target="_blank" rel="noopener noreferrer"
-                aria-label="Assista a Garagem 120 no YouTube (abre em nova janela)">
-                <i class="fab fa-youtube" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.instagram.com/garagem120/" target="_blank" rel="noopener noreferrer"
-                aria-label="Siga a Garagem 120 no Instagram (abre em nova janela)">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-              </a>
-            </nav>
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2">
-          <div class="artist-img">
-            <img src="/assets/img/Artistas/GARAGEM120.jpg" alt="Banda Garagem 120 em performance com seus integrantes"
-              class="img-fluid" (click)="openImage('/assets/img/Artistas/GARAGEM120.jpg')"
-              (keydown.enter)="openImage('/assets/img/Artistas/GARAGEM120.jpg')" role="button" tabindex="0"
-              aria-label="Clique ou pressione Enter para ampliar a imagem da Garagem 120">
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Card 4 - Frayzer -->
-    <article class="artist-card reveal fade-left" role="article" aria-labelledby="frayzer-heading">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="artist-img">
-            <!-- Aqui fica a imagem do Artista -->
-            <img src="/assets/img/Artistas/FRAYZER.jpg"
-              alt="Banda Frayzer em apresentação mostrando todos os integrantes" class="img-fluid"
-              (click)="openImage('/assets/img/Artistas/FRAYZER.jpg')"
-              (keydown.enter)="openImage('/assets/img/Artistas/FRAYZER.jpg')" role="button" tabindex="0"
-              aria-label="Clique ou pressione Enter para ampliar a imagem da Banda Frayzer">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="artist-text">
-            <h3 id="frayzer-heading">Frayzer</h3>
-            <p>Frayzer traz uma mistura única de ritmos e influências em suas músicas. "Horas e Horas" demonstra sua
-              versatilidade e talento como artista.</p>
-            <nav class="social-links" aria-label="Redes sociais da Banda Frayzer">
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
-                aria-label="Siga a Banda Frayzer no Facebook (abre em nova janela)">
-                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.youtube.com/@BandaFrayzer" target="_blank" rel="noopener noreferrer"
-                aria-label="Assista a Banda Frayzer no YouTube (abre em nova janela)">
-                <i class="fab fa-youtube" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.instagram.com/banda.frayzer/" target="_blank" rel="noopener noreferrer"
-                aria-label="Siga a Banda Frayzer no Instagram (abre em nova janela)">
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-              </a>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </article>
-
-
+      </article>
+    </ng-container>
   </div>
 </section>
 

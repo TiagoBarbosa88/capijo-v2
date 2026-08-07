@@ -18,4 +18,9 @@ describe('ArtistasComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should load artists data from the data source', () => {
+    expect(component.artists.length).toBeGreaterThan(0);
+    expect(component.artists[0].name).toContain('Alex');
+  });
 });
