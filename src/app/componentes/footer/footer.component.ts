@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SITE_CONFIG } from '../../config/site.config';
 
 @Component({
   selector: 'app-footer',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
   currentYear: number = new Date().getFullYear();
+  site = SITE_CONFIG;
 }

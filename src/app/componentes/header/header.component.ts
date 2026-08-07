@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { SITE_CONFIG } from '../../config/site.config';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,10 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  site = SITE_CONFIG;
   isMenuOpen = false;
 
   constructor(private router: Router) {
-    // Close menu on route change
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isMenuOpen = false;
@@ -18,11 +19,11 @@ export class HeaderComponent {
     });
   }
 
-  toggleMenu() {
+  toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  closeMenu() {
+  closeMenu(): void {
     this.isMenuOpen = false;
   }
 }

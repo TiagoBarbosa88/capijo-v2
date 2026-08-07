@@ -9,14 +9,14 @@
               <i class="fas fa-phone"></i>
               <div class="contact-info">
                 <p>Telefone</p>
-                <h6>11- 99782-2709</h6>
+                <h6>{{ site.phone }}</h6>
               </div>
             </li>
             <li>
               <i class="fas fa-envelope"></i>
               <div class="contact-info">
                 <p>Email</p>
-                <h6><a href="mailto:capijoproducao&#64;gmail.com">capijoproducao&#64;gmail.com</a></h6>
+                <h6><a [href]="'mailto:' + site.email">{{ site.email }}</a></h6>
               </div>
             </li>
           </ul>
@@ -26,13 +26,13 @@
         <div class="footer__social">
           <h2>Capijo - Produções</h2>
           <div class="footer__social__links">
-            <a href="https://www.facebook.com/profile.php?id=61564964385846" target="_blank" rel="noopener"
+            <a [href]="site.social.facebook" target="_blank" rel="noopener"
               aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/@CapijoProdu%C3%A7ao" target="_blank" rel="noopener"
+            <a [href]="site.social.youtube" target="_blank" rel="noopener"
               aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/capijoproducao" target="_blank" rel="noopener" aria-label="Instagram"><i
+            <a [href]="site.social.instagram" target="_blank" rel="noopener" aria-label="Instagram"><i
                 class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/5511989883854" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+            <a [href]="site.social.whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i
                 class="fab fa-whatsapp"></i></a>
           </div>
         </div>
@@ -52,10 +52,6 @@
       <p style="margin-top: 10px; font-size: 0.9em;">
         Desenvolvido por <a href="https://www.linkedin.com/in/tiagolimabarbosa/" target="_blank"
           rel="noopener noreferrer">Tiago Barbosa</a> & Joílson Santos </p>
-      <!-- Créditos escondidos -->
-      <p style="font-size: 0; height: 0; overflow: hidden;" aria-hidden="true">
-        Desenvolvido por <a href="https://www.linkedin.com/in/tiagolimabarbosa/">Tiago Barbosa</a>
-      </p>
     </div>
   </div>
 </footer>

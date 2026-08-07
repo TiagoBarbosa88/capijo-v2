@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TitleService } from './services/title.service';
+import { SeoService } from './services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +7,5 @@ import { TitleService } from './services/title.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private titleService: TitleService) { }
+  constructor(private seoService: SeoService) { }
 }
