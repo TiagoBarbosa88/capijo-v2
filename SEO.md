@@ -44,30 +44,37 @@
 O projeto já usa `SeoService` centralizado com meta dinâmico em `app-routing.module.ts`.
 
 ### Página inicial
+
 - Title: `Capijo Music Produções - Produtora Musical`
 - Description: `Capijo Music - Estúdio e produtora musical em São Paulo. Gravação, mixagem, masterização em Perus e shows na região.`
 
 ### Artistas
+
 - Title: `Capijo Music Produções - Artistas`
 - Description: `Conheça os artistas da Capijo Music: Senhor Florista, Willian Rodrigues, Alex Lacerda e mais talentos de Perus e região.`
 
 ### Estúdio
+
 - Title: `Capijo Music Produções - Estúdio`
 - Description: `Estúdio de gravação profissional em Perus, São Paulo. Equipamentos de ponta para gravação, mixagem e masterização.`
 
 ### Eventos
+
 - Title: `Capijo Music Produções - Eventos`
 - Description: `Shows e eventos musicais realizados pela Capijo Music em Perus, Franco da Rocha, Francisco Morato e região.`
 
 ### Equipe
+
 - Title: `Capijo Music Produções - Nossa Equipe`
 - Description: `Conheça a equipe por trás da Capijo Music Produções — produtores, técnicos e profissionais da música.`
 
 ### Parceiros
+
 - Title: `Capijo Music Produções - Parceiros`
 - Description: `Parceiros e apoiadores da Capijo Music: luthieria, som, bares e comércios locais de Perus e região.`
 
 ### Contato
+
 - Title: `Capijo Music Produções - Contato`
 - Description: `Entre em contato com a Capijo Music em Perus, São Paulo. Telefone, email e endereço do estúdio e produtora musical.`
 
