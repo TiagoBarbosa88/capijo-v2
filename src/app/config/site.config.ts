@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: 'Capijo Music Produções',
   baseUrl: 'https://capijo.com',
-  phone: '11-98988-3854',
+  phone: '11-99782-2709',
   phoneTel: '+5511989883854',
   email: 'Capijoproducao@gmail.com',
   address: {
