@@ -54,7 +54,6 @@
       font-weight: 300;
       font-family: "Rockville Solid Regular";
       margin: 0;
-      // text-transform: uppercase;
       background: linear-gradient(to right, #003366, #fff);
       background-size: 200% auto;
       background-clip: text;
@@ -68,7 +67,7 @@
 }
 
 .about {
-  padding: 30px 0; // Reduced from 60px to 30px
+  padding: 30px 0;
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 
   &__pic {
@@ -76,7 +75,7 @@
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    height: 450px; // Aumentado para combinar com o texto
+    height: 450px;
 
     img {
       width: 100%;
@@ -108,9 +107,34 @@
     }
   }
 
+  // Cards com imagem alta
   &--tall {
     .about__pic {
       height: 620px;
+    }
+  }
+
+  // -------------------------------------------------------
+  // Concurso Mirim
+  // A imagem mantém a proporção original.
+  // Altura = 100% do bloco.
+  // Largura = automática.
+  // -------------------------------------------------------
+  &__pic--concurso {
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 10px;
     }
   }
 
@@ -145,6 +169,11 @@
         &:hover::after {
           width: 100px;
         }
+      }
+
+      h3 {
+        color: #003366;
+        margin-bottom: 0;
       }
     }
 
@@ -195,7 +224,7 @@
 
   &__slider {
     padding: 20px 0;
-    margin-bottom: 50px; // Espaço extra para a paginação
+    margin-bottom: 50px;
 
     .swiper-button-next,
     .swiper-button-prev {
@@ -209,8 +238,8 @@
     }
 
     .swiper-pagination {
-      bottom: -40px !important; // Move as bolinhas para baixo
-      padding: 10px 0; // Adiciona padding vertical
+      bottom: -40px !important;
+      padding: 10px 0;
 
       .swiper-pagination-bullet {
         margin: 0 5px;
@@ -318,6 +347,7 @@
   0% {
     background-position: 200% center;
   }
+
   100% {
     background-position: 0% center;
   }
@@ -328,6 +358,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -339,6 +370,7 @@
     opacity: 0;
     transform: translateX(20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -349,15 +381,20 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
+// -------------------------------------------------------
 // Responsividade
+// -------------------------------------------------------
+
 @media (max-width: 991.98px) {
   .hero {
     height: 30vh;
+
     &__text {
       .hero-subtitle {
         font-size: 2rem;
@@ -372,6 +409,24 @@
   .about {
     &__pic {
       margin-bottom: 30px;
+    }
+
+    &--tall {
+      .about__pic {
+        height: 500px;
+      }
+    }
+
+    // Concurso no tablet
+    &__pic--concurso {
+      height: auto;
+      min-height: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+      }
     }
   }
 
@@ -389,6 +444,18 @@
 
       h1 {
         font-size: 2.5rem;
+      }
+    }
+  }
+
+  .about {
+    &__pic--concurso {
+      height: auto;
+      min-height: 0;
+
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }

@@ -8,6 +8,7 @@ import { EstudioComponent } from './pages/estudio/estudio.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ParceirosComponent } from './pages/parceiros/parceiros.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
+import { DoacoesComponent } from './pages/doacoes/doacoes.component';
 
 const routes: Routes = [
   {
@@ -53,6 +54,17 @@ const routes: Routes = [
         title: 'Eventos',
         description: 'Shows e eventos musicais realizados pela Capijo Music em Perus, Franco da Rocha, Francisco Morato e região.',
         ogImage: '/assets/img/eventos/06-08-1.jpg',
+        jsonLd: buildEventsSchema()
+      }
+    }
+  },
+  {
+    path: 'doacoes',
+    component: DoacoesComponent,
+    data: {
+      seo: {
+        title: 'Doações',
+        description: 'Apoie a cultura musical em Perus e região. Faça uma doação para a Capijo Music e ajude a criar novas oportunidades.',
         jsonLd: buildEventsSchema()
       }
     }

@@ -17,6 +17,7 @@ import { ServicosComponent } from './pages/servicos/servicos.component';
 import { ScrollRevealService } from './services/scroll-reveal.service';
 import { EquipeComponent } from './pages/equipe/equipe.component';
 import { ArtistasModule } from './pages/artistas/artistas.module';
+import { DoacoesComponent } from './pages/doacoes/doacoes.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ArtistasModule } from './pages/artistas/artistas.module';
     ServicosComponent,
     ParceirosComponent,
     ContatoComponent,
-    EquipeComponent
+    EquipeComponent,
+    DoacoesComponent
   ],
   imports: [
     BrowserModule,

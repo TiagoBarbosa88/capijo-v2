@@ -1,0 +1,669 @@
+.donations {
+
+  // =====================================================
+  // HERO / BANNER
+  // =====================================================
+
+  &__hero {
+    width: 100%;
+
+    background: #003366;
+
+    overflow: hidden;
+  }
+
+
+  &__banner {
+    width: 100%;
+
+    line-height: 0;
+  }
+
+
+  &__banner-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
+  }
+
+
+  // =====================================================
+  // POR QUE DOAR
+  // =====================================================
+
+  &__about {
+    padding: 70px 0;
+
+    background:
+      linear-gradient(
+        135deg,
+        #f8f9fa 0%,
+        #ffffff 100%
+      );
+  }
+
+
+  &__text {
+    padding: 30px;
+
+    animation: donationsFadeLeft 0.8s ease forwards;
+
+
+    .section-title {
+      margin-bottom: 30px;
+
+
+      h2 {
+        position: relative;
+
+        margin-bottom: 20px;
+
+        font-size: 2.5rem;
+        font-weight: 700;
+
+        color: #003366;
+
+
+        &::after {
+          content: "";
+
+          position: absolute;
+
+          bottom: -10px;
+          left: 0;
+
+          width: 50px;
+          height: 3px;
+
+          background:
+            linear-gradient(
+              90deg,
+              #003366,
+              #0066cc
+            );
+        }
+      }
+
+
+      h3 {
+        color: #003366;
+
+        font-weight: 500;
+      }
+    }
+
+
+    p {
+      margin-bottom: 1.5rem;
+
+      font-size: 1.1rem;
+
+      line-height: 1.8;
+
+      color: #666;
+    }
+  }
+
+
+  // =====================================================
+  // DESTAQUE
+  // =====================================================
+
+  &__highlight {
+    padding: 50px 40px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    border-top: 4px solid #003366;
+
+    text-align: center;
+
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    animation: donationsFadeRight 0.8s ease forwards;
+
+
+    &:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+
+    h3 {
+      margin: 20px 0 15px;
+
+      font-size: 1.8rem;
+
+      color: #003366;
+    }
+
+
+    p {
+      margin: 0;
+
+      font-size: 1.05rem;
+
+      line-height: 1.7;
+
+      color: #666;
+    }
+  }
+
+
+  &__highlight-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #003366;
+
+    color: #ffffff;
+
+    font-size: 2rem;
+  }
+
+
+  // =====================================================
+  // FORMAS DE AJUDAR
+  // =====================================================
+
+  &__ways {
+    padding: 70px 0;
+
+    background: #f8f9fa;
+  }
+
+
+  &__section-title {
+    margin-bottom: 50px;
+
+    text-align: center;
+
+
+    h2 {
+      margin-bottom: 20px;
+
+      font-size: 2.5rem;
+      font-weight: 700;
+
+      color: #003366;
+    }
+
+
+    h3 {
+      color: #666;
+
+      font-weight: 400;
+    }
+  }
+
+
+  // =====================================================
+  // CARDS
+  // =====================================================
+
+  &__card {
+    height: 100%;
+
+    padding: 40px 30px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+      0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    animation: donationsCardFade 0.8s ease forwards;
+
+
+    &:hover {
+      transform: translateY(-7px);
+
+      box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+
+    h4 {
+      margin: 20px 0 15px;
+
+      font-size: 1.4rem;
+
+      color: #003366;
+    }
+
+
+    p {
+      margin-bottom: 25px;
+
+      font-size: 1rem;
+
+      line-height: 1.7;
+
+      color: #666;
+    }
+  }
+
+
+  &__card-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #003366;
+
+    color: #ffffff;
+
+    font-size: 1.7rem;
+
+    transition:
+      transform 0.3s ease,
+      background 0.3s ease;
+  }
+
+
+  &__card:hover &__card-icon {
+    transform: scale(1.08);
+
+    background: #0066cc;
+  }
+
+
+  &__card-status {
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    background: rgba(0, 51, 102, 0.08);
+
+    color: #003366;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+  }
+
+
+  // =====================================================
+  // CONTA / PIX
+  // =====================================================
+
+  &__account {
+    padding: 70px 0;
+
+    background:
+      linear-gradient(
+        135deg,
+        #003366 0%,
+        #004d99 100%
+      );
+  }
+
+
+  &__account-box {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 50px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    box-shadow:
+      0 15px 40px rgba(0, 0, 0, 0.15);
+
+    animation: donationsFadeUp 0.8s ease forwards;
+  }
+
+
+  &__account-icon {
+    flex-shrink: 0;
+
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #003366;
+
+    color: #ffffff;
+
+    font-size: 2.2rem;
+  }
+
+
+  &__account-content {
+
+    .section-title {
+      margin-bottom: 20px;
+
+
+      h2 {
+        margin-bottom: 10px;
+
+        font-size: 2rem;
+
+        color: #003366;
+      }
+
+
+      h3 {
+        font-size: 1.2rem;
+
+        color: #0066cc;
+      }
+    }
+
+
+    p {
+      margin-bottom: 20px;
+
+      line-height: 1.7;
+
+      color: #666;
+    }
+  }
+
+
+  &__coming-soon {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    background: #f1f5f9;
+
+    color: #003366;
+
+    font-weight: 600;
+
+
+    i {
+      font-size: 1.1rem;
+    }
+  }
+
+
+  // =====================================================
+  // FOOTER
+  // =====================================================
+
+  &__footer {
+    padding: 70px 0;
+
+    background: #ffffff;
+
+    text-align: center;
+  }
+
+
+  &__footer-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    animation: donationsFadeUp 0.8s ease forwards;
+
+
+    > i {
+      display: block;
+
+      margin-bottom: 20px;
+
+      font-size: 2.5rem;
+
+      color: #003366;
+    }
+
+
+    h2 {
+      margin-bottom: 15px;
+
+      font-size: 2.5rem;
+
+      color: #003366;
+    }
+
+
+    p {
+      margin-bottom: 20px;
+
+      font-size: 1.1rem;
+
+      line-height: 1.7;
+
+      color: #666;
+    }
+
+
+    strong {
+      font-size: 1.1rem;
+
+      color: #003366;
+    }
+  }
+}
+
+
+// =====================================================
+// ANIMAÇÕES
+// =====================================================
+
+@keyframes donationsFadeLeft {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes donationsFadeRight {
+
+  from {
+    opacity: 0;
+
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes donationsFadeUp {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes donationsCardFade {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+// =====================================================
+// RESPONSIVIDADE
+// =====================================================
+
+@media (max-width: 991.98px) {
+
+  .donations {
+
+    &__about {
+      padding: 50px 0;
+    }
+
+
+    &__highlight {
+      margin-top: 30px;
+    }
+
+
+    &__card {
+      margin-bottom: 25px;
+    }
+
+
+    &__account-box {
+      margin: 0 15px;
+    }
+  }
+}
+
+
+@media (max-width: 767.98px) {
+
+  .donations {
+
+    // ---------------------------------------------------
+    // Banner
+    // ---------------------------------------------------
+
+    &__hero {
+      width: 100%;
+    }
+
+
+    &__banner {
+      width: 100%;
+    }
+
+
+    &__banner-image {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      max-width: 100%;
+    }
+
+
+    // ---------------------------------------------------
+    // Conteúdo
+    // ---------------------------------------------------
+
+    &__text {
+      padding: 10px 0;
+    }
+
+
+    &__text .section-title h2,
+    &__section-title h2 {
+      font-size: 2rem;
+    }
+
+
+    // ---------------------------------------------------
+    // Conta / PIX
+    // ---------------------------------------------------
+
+    &__account-box {
+      flex-direction: column;
+
+      padding: 35px 25px;
+
+      text-align: center;
+    }
+
+
+    &__account-content .section-title h2 {
+      font-size: 1.7rem;
+    }
+
+
+    // ---------------------------------------------------
+    // Footer
+    // ---------------------------------------------------
+
+    &__footer-content h2 {
+      font-size: 2rem;
+    }
+  }
+}
