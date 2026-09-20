@@ -20,7 +20,7 @@ export const SITE_CONFIG = {
     facebook: 'https://www.facebook.com/profile.php?id=61564964385846',
     youtube: 'https://www.youtube.com/@CapijoProdu%C3%A7ao',
     instagram: 'https://www.instagram.com/capijoproducao',
-    whatsapp: 'https://wa.me/551197822709'
+    whatsapp: 'https://wa.me/+551197822709'
   },
   googleSiteVerification: 'seu-código-aqui',
   defaultOgImage: '/assets/img/banner/logo4.png'

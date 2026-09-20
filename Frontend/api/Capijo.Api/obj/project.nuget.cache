@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aYEsVzqUsYA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Tiago Barbosa\\Documents\\workspace\\capijo-v2\\api\\Capijo.Api\\Capijo.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tiago Barbosa\\AppData\\Local\\Temp\\cursor-sandbox-cache\\eba0f1415463978d02e2656fe57e640f\\nuget\\microsoft.aspnetcore.openapi\\10.0.11\\microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "C:\\Users\\Tiago Barbosa\\AppData\\Local\\Temp\\cursor-sandbox-cache\\eba0f1415463978d02e2656fe57e640f\\nuget\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512"
+  ],
+  "logs": []
+}
