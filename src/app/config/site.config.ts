@@ -5,12 +5,12 @@ export const SITE_CONFIG = {
   phoneTel: '+5511978227098',
   email: 'Capijoproducao@gmail.com',
   address: {
-    street: 'Pr. Inácia Dias, 64',
+    street: 'Pr. Inácia Dias, SN',
     locality: 'Perus',
     region: 'SP',
     postalCode: '05203-030',
     country: 'BR',
-    full: 'Pr. Inácia Dias, 64 - Perus, São Paulo - SP, 05203-030',
+    full: 'Pr. Inácia Dias, SN - Perus, São Paulo - SP, 05203-030',
   },
   geo: {
     latitude: -23.403872,

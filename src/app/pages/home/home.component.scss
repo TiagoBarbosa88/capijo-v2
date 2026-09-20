@@ -66,9 +66,14 @@
   }
 }
 
+
 .about {
   padding: 30px 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: linear-gradient(
+    135deg,
+    #f8f9fa 0%,
+    #ffffff 100%
+  );
 
   &__pic {
     position: relative;
@@ -107,6 +112,7 @@
     }
   }
 
+
   // Cards com imagem alta
   &--tall {
     .about__pic {
@@ -114,29 +120,34 @@
     }
   }
 
+
   // -------------------------------------------------------
   // Concurso Mirim
-  // A imagem mantém a proporção original.
-  // Altura = 100% do bloco.
-  // Largura = automática.
+  // A imagem mantém sua proporção original.
+  // Não acompanha a altura do texto.
   // -------------------------------------------------------
   &__pic--concurso {
-    height: 100%;
-    min-height: 100%;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
+    height: auto;
+    min-height: 0;
+    display: block;
     overflow: hidden;
+    border-radius: 10px;
 
     img {
-      height: 100%;
-      width: auto;
+      display: block;
+      width: 100%;
+      height: auto;
       max-width: 100%;
       object-fit: contain;
-      display: block;
       border-radius: 10px;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
     }
   }
+
 
   &__text {
     padding: 30px;
@@ -162,7 +173,11 @@
           left: 0;
           width: 50px;
           height: 3px;
-          background: linear-gradient(90deg, #003366, #0066cc);
+          background: linear-gradient(
+            90deg,
+            #003366,
+            #0066cc
+          );
           transition: width 0.3s ease;
         }
 
@@ -189,6 +204,7 @@
   }
 }
 
+
 .event {
   padding: 40px 0;
   background: #f8f9fa;
@@ -212,7 +228,11 @@
         transform: translateX(-50%);
         width: 50px;
         height: 3px;
-        background: linear-gradient(90deg, #003366, #0066cc);
+        background: linear-gradient(
+          90deg,
+          #003366,
+          #0066cc
+        );
         transition: width 0.3s ease;
       }
 
@@ -221,6 +241,7 @@
       }
     }
   }
+
 
   &__slider {
     padding: 20px 0;
@@ -256,6 +277,7 @@
     }
   }
 
+
   &__item {
     background: white;
     border-radius: 10px;
@@ -269,6 +291,7 @@
       transform: translateY(-5px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
+
 
     &__pic {
       height: 250px;
@@ -297,6 +320,7 @@
         opacity: 1;
       }
 
+
       .tag-date {
         position: absolute;
         left: 0;
@@ -310,9 +334,11 @@
       }
     }
 
+
     &:hover .tag-date {
       transform: translateY(0);
     }
+
 
     &__text {
       padding: 20px;
@@ -343,6 +369,11 @@
   }
 }
 
+
+// -------------------------------------------------------
+// Animations
+// -------------------------------------------------------
+
 @keyframes shimmer {
   0% {
     background-position: 200% center;
@@ -352,6 +383,7 @@
     background-position: 0% center;
   }
 }
+
 
 @keyframes fadeInUp {
   from {
@@ -365,6 +397,7 @@
   }
 }
 
+
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -377,6 +410,7 @@
   }
 }
 
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -387,15 +421,18 @@
   }
 }
 
+
 // -------------------------------------------------------
 // Responsividade
 // -------------------------------------------------------
 
 @media (max-width: 991.98px) {
+
   .hero {
     height: 30vh;
 
     &__text {
+
       .hero-subtitle {
         font-size: 2rem;
       }
@@ -406,23 +443,30 @@
     }
   }
 
+
   .about {
+
     &__pic {
       margin-bottom: 30px;
     }
 
+
     &--tall {
+
       .about__pic {
         height: 500px;
       }
     }
 
+
     // Concurso no tablet
     &__pic--concurso {
       height: auto;
       min-height: 0;
+      margin-bottom: 30px;
 
       img {
+        display: block;
         width: 100%;
         height: auto;
         max-width: 100%;
@@ -430,14 +474,19 @@
     }
   }
 
+
   .event__item .event-img img {
     height: 200px;
   }
 }
 
+
 @media (max-width: 767.98px) {
+
   .hero {
+
     &__text {
+
       .hero-subtitle {
         font-size: 1.5rem;
       }
@@ -448,17 +497,22 @@
     }
   }
 
+
   .about {
+
     &__pic--concurso {
       height: auto;
       min-height: 0;
+      margin-bottom: 30px;
 
       img {
+        display: block;
         width: 100%;
         height: auto;
       }
     }
   }
+
 
   .event__item {
     margin: 10px;
